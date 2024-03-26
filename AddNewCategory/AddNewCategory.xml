@@ -3,7 +3,6 @@
 <suite name="Suite" verbose="1">
     <test name="First Test">
         <classes>
-            <class name="vn.viettelai.baseTest.baseTest"></class>
             <class name="vn.viettelai.baseTest.addnewcategory"></class>
         </classes>
     </test>

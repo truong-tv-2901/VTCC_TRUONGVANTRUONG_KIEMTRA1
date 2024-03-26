@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class baseTest {
     public WebDriver driver = new ChromeDriver();
-    @BeforeClass
+    @BeforeSuite
     public void CreateDiver(){
 //        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -17,7 +17,7 @@ public class baseTest {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 
     }
-    @BeforeMethod
+    @BeforeClass
     public void login(){
         //Đăng nhập vào trang chủ
         driver.get("https://cms.anhtester.com/login");
@@ -27,7 +27,7 @@ public class baseTest {
 
     }
 
-    @AfterClass
+    @AfterSuite
     public void CloseDrive(){
 
         driver.quit();
