@@ -76,5 +76,17 @@ public class addnewcategory extends baseTest{
         driver.findElement(By.xpath("(//button[normalize-space()='Save'])[1]")).click();
     }
 
+      @Test
+    public void VefifyResult(){
+        WebElement Search_cate = driver.findElement(By.id("search"));
+        Search_cate.sendKeys("Sushi");
+        Actions action = new Actions(driver);
+        action.sendKeys(Keys.RETURN);
+        action.perform();
+        WebElement Result = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]"));
+        Assert.assertTrue(Result.getText().contains("Sushi"));
+    }
+
+
 
 }
