@@ -29,9 +29,9 @@ public class addnewcategory extends baseTest{
     @Test
     public void ParentCate(){
 
-        driver.findElement(By.xpath("aiz-mobile-toggler")).click();
+        driver.findElement(By.xpath("//div[contains(text(),'No Parent')]")).click();
 
-        driver.findElement(By.xpath("((//a[@id='bs-select-1-4'])[1]")).sendKeys("Laptop");
+        driver.findElement(By.xpath("(//div[@class='bs-searchbox'])[1]")).sendKeys("Laptop");
 
         Actions action = new Actions(driver);
         action.sendKeys(Keys.ENTER).perform();
@@ -45,10 +45,8 @@ public class addnewcategory extends baseTest{
 
     @Test
     public void TestType(){
-        Select select = new Select(driver.findElement(By.xpath("aiz-mobile-toggler")));
+        Select select = new Select(driver.findElement(By.name("digital")));
         select.selectByIndex(1);
-
-
     }
 
     @Test
