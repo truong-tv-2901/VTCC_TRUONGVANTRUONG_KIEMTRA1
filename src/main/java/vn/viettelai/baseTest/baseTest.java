@@ -17,7 +17,7 @@ public class baseTest {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 
     }
-    @BeforeTest
+    @BeforeMethod
     public void login(){
         //Đăng nhập vào trang chủ
         driver.get("https://cms.anhtester.com/login");
@@ -26,14 +26,6 @@ public class baseTest {
         driver.findElement(By.xpath("(//button[normalize-space()='Login'])[1]")).click();
 
     }
-//    @AfterTest
-//    public void Sleep() throws InterruptedException {
-//        try {
-//            Thread.sleep(5000);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
 
     @AfterClass
     public void CloseDrive(){
