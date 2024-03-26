@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 public class addnewcategory extends baseTest{
     @Test
     public void AddnewCategory(){
-        driver.findElement(By.className("aiz-mobile-toggler")).click();
+        // driver.findElement(By.className("aiz-mobile-toggler")).click();
         driver.findElement(By.xpath("//span[normalize-space()='Products']")).click();
         driver.findElement(By.xpath("//span[normalize-space()='Category']")).click();
 
@@ -74,7 +74,6 @@ public class addnewcategory extends baseTest{
     @Test
     public void ButtonSave(){
         driver.findElement(By.xpath("(//button[normalize-space()='Save'])[1]")).click();
-
     }
 
 
